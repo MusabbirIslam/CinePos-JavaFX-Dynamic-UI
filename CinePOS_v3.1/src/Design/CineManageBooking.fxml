@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" stylesheets="@CineDetailsStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CineManageBookingController">
+   <children>
+      <Button mnemonicParsing="false" onAction="#toHome" text="Home" />
+      <Label alignment="CENTER" contentDisplay="CENTER" styleClass="label-title" text="Print Pre-Booked picking" VBox.vgrow="ALWAYS">
+         <padding>
+            <Insets bottom="10.0" />
+         </padding>
+      </Label>
+      <TextField fx:id="bookingCodeTextField" promptText="Enter booking code here or phone no to resend booking code or scan QR code already sent">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </TextField>
+      <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" spacing="100.0">
+         <children>
+            <Button fx:id="resendCodeButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#resendCodeButtonAction" styleClass="button-blue" text="Resend Code" HBox.hgrow="ALWAYS" />
+            <Button fx:id="printTicketButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#printTicketButtonAction" styleClass="button-blue" text="Print Ticket" HBox.hgrow="ALWAYS" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <VBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

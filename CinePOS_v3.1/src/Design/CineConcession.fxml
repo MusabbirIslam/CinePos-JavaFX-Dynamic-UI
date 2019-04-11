@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<SplitPane dividerPositions="0.7" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="400.0" minWidth="500.0" prefHeight="500.0" prefWidth="936.0" stylesheets="@CineAdminStyle.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CineConcessionController">
+  <items>
+      <TabPane fx:id="productsTabPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" tabClosingPolicy="UNAVAILABLE">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </TabPane>
+      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="398.0" prefWidth="212.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" text="Orders" />
+            <TableView fx:id="salesTableView" editable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+              <columns>
+                <TableColumn fx:id="itemColumn" prefWidth="100.0" text="Item List" />
+                <TableColumn prefWidth="56.0" text="QTY">
+                     <columns>
+                        <TableColumn fx:id="plusColumn" editable="false" prefWidth="75.0" sortable="false" />
+                        <TableColumn fx:id="qtyColumn" prefWidth="75.0" />
+                        <TableColumn fx:id="minusColumn" editable="false" prefWidth="75.0" sortable="false" />
+                     </columns></TableColumn>
+                  <TableColumn fx:id="totalColumn" prefWidth="48.0" text="Total" />
+              </columns>
+            </TableView>
+            <HBox maxHeight="-Infinity" maxWidth="1.7976931348623157E308">
+               <children>
+                  <Label fx:id="itemTotalLabel" maxWidth="1.7976931348623157E308" text="Total" HBox.hgrow="ALWAYS" />
+                  <Label fx:id="qtyTotalLabel" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" text="0" HBox.hgrow="ALWAYS" />
+                  <Label fx:id="priceTotalLabel" layoutX="38.0" layoutY="10.0" maxWidth="1.7976931348623157E308" text="0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+  </items>
+</SplitPane>

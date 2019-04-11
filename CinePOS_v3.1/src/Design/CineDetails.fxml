@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<SplitPane dividerPositions="0.47564469914040114" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" stylesheets="@CineDetailsStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CineDetailsController">
+  <items>
+    <AnchorPane>
+         <children>
+            <VBox prefHeight="498.0" prefWidth="329.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Region prefHeight="100.0" prefWidth="200.0" />
+                  <Label fx:id="eroorLavel" text="Error In Trailer Link" visible="false">
+                     <effect>
+                        <Lighting diffuseConstant="1.47" specularConstant="1.79" specularExponent="0.0" surfaceScale="0.0">
+                           <bumpInput>
+                              <Shadow color="#eb0b0b" height="198.91" radius="102.66" width="213.73" />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant color="#dd1010" />
+                           </light>
+                        </Lighting>
+                     </effect>
+                     <padding>
+                        <Insets left="100.0" />
+                     </padding>
+                  </Label>
+                  <WebView fx:id="trailerWebView" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                  <Button contentDisplay="RIGHT" lineSpacing="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#watchTrailerHereButtonClicked" styleClass="button-red" text="Watch Trailer Here" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow choke="0.2" height="0.24" radius="15.932499999999997" width="65.49" />
+                     </effect>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="@Image/play.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Region prefHeight="100.0" prefWidth="200.0" />
+               </children>
+            </VBox>
+         </children></AnchorPane>
+    <AnchorPane>
+         <children>
+            <VBox prefHeight="398.0" prefWidth="296.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox maxWidth="1.7976931348623157E308" spacing="20.0">
+                     <children>
+                        <Button mnemonicParsing="false" text="Home" onAction="#toHome"/>
+                        <Label fx:id="titleLabel" maxWidth="1.7976931348623157E308" styleClass="label-title" text="Title Label" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="timeLabel" alignment="CENTER_RIGHT" styleClass="time-label" text="Time Label">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" right="5.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <Button lineSpacing="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#buyTicketButtonClicked" styleClass="button-red" text="Buy Ticket here" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow choke="0.2" height="0.24" radius="15.932499999999997" width="65.49" />
+                     </effect>
+                  </Button>
+                  <HBox maxWidth="1.7976931348623157E308" spacing="10.0">
+                     <children>
+                        <Label text="Ticket:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#adultButtonClicked" styleClass="button-gray" text="Adult" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#childButtonClicked" styleClass="button-gray" text="Child" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#studentButtonClicked" styleClass="button-gray" text="Student" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox spacing="20.0">
+                     <children>
+                        <Label fx:id="screenLabel" text="Screen:" />
+                        <Label fx:id="ratingLabel" text="Rating:" />
+                        <Label fx:id="genreLabel" text="Genre:" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox spacing="30.0">
+                     <children>
+                        <Label text="Start Time:" />
+                        <TextField fx:id="startTimeField" editable="false" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="200.0" spacing="30.0">
+                     <children>
+                        <Label text="End Time:">
+                           <padding>
+                              <Insets right="6.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="endTimeField" editable="false" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="200.0" spacing="30.0">
+                     <children>
+                        <Label text="Duration :">
+                           <padding>
+                              <Insets right="6.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="durationTimeField" editable="false" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox spacing="20.0">
+                     <children>
+                        <Label text="Synopsis:" />
+                        <Label fx:id="synopsisLabel" text="synopsis" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="350.0" spacing="20.0">
+                     <children>
+                        <Label text="Cast: " />
+                        <Label fx:id="castLabel" layoutX="20.0" layoutY="15.0" text="Cast: " />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="400.0" spacing="20.0">
+                     <children>
+                        <Label text="Director :" />
+                        <Label fx:id="directorLabel" text="directorLabel" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="450.0" maxWidth="1.7976931348623157E308" spacing="20.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label text="Next Showing:" />
+                        <TableView fx:id="nextShowTableView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="C1" />
+                            <TableColumn prefWidth="75.0" text="C2" />
+                          </columns>
+                        </TableView>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

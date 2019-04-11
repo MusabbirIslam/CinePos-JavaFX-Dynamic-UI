@@ -1,0 +1,104 @@
+.root{
+    -fx-background-color: linear-gradient(#0d47a1,#2196f3);
+}
+.split-pane:horizontal > .split-pane-divider {
+   -fx-background-color: #FFFFFF;
+}
+
+.label-title
+{
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
+
+.time-label
+{
+    -fx-text-fill: #4caf50;
+}
+
+.button-blue{
+    -fx-background-color: 
+        #a6b5c9,
+        linear-gradient(#303842 0%, #3e5577 20%, #375074 100%),
+        linear-gradient(#768aa5 0%, #849cbb 5%, #5877a2 50%, #486a9a 51%, #4a6c9b 100%);
+    -fx-background-insets: 0 0 -1 0,0,1;
+    -fx-background-radius: 5,5,4;
+    -fx-padding: 7 30 7 30;
+    -fx-font-family: "Helvetica";
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+     -fx-pref-height: 100px;
+    -fx-pref-width: 280px;
+}
+.button:hover{
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),
+        #9d4024,
+        #d86e3a,
+        radial-gradient(center 50% 50%, radius 100%, #ea7f4b, #c54e2c);
+}
+
+.button-red
+{
+    -fx-background-color: linear-gradient(#ff5400, #be1d00);
+    -fx-text-fill: #FFFFFF;
+    -fx-background-radious: 10;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+}
+.button-gray{
+    -fx-background-color: 
+        linear-gradient(#686868 0%, #232723 25%, #373837 75%, #757575 100%),
+        linear-gradient(#020b02, #3a3a3a),
+        linear-gradient(#b9b9b9 0%, #c2c2c2 20%, #afafaf 80%, #c8c8c8 100%),
+        linear-gradient(#f5f5f5 0%, #dbdbdb 50%, #cacaca 51%, #d7d7d7 100%);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 9,8,5,4;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow( three-pass-box , rgba(255,255,255,0.2) , 1, 0.0 , 0 , 1);
+}
+.table-view{
+   -fx-background-color: transparent;
+}
+
+.button-orange{
+    -fx-background-color: 
+        linear-gradient(#ffd65b, #e68400),
+        linear-gradient(#ffef84, #f2ba44),
+        linear-gradient(#ffea6a, #efaa22),
+        linear-gradient(#ffe657 0%, #f8c202 50%, #eea10b 100%),
+        linear-gradient(from 0% 0% to 15% 50%, rgba(255,255,255,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 10;
+    -fx-background-insets: 0, 1;
+    -fx-text-fill: #654b00;
+    -fx-padding: 10 20 10 20;
+}
+
+.button-green {
+    -fx-background-color:
+        linear-gradient(#f0ff35, #a9ff00),
+        radial-gradient(center 50% -40%, radius 200%, #b8ee36 45%, #80c800 50%);
+    -fx-background-radius: 10;
+    -fx-background-insets: 0, 1;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+    -fx-text-fill: #395306;
+}
+
+.button-dark-blue {
+    -fx-background-color: 
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 10;
+    -fx-background-insets: 0,1,2,0;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-padding: 10 20 10 20;
+}
+
+.label
+{
+    -fx-text-fill: #e8e8e8;
+    -fx-font-family: "Helvetica";
+    -fx-font-size: 16px;
+}

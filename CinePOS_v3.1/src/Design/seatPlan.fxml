@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #e0e0e0;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.seatPlanController">
+   <children>
+      <ScrollPane fx:id="seatScroll" fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" pannable="true" style="-fx-background-color: black;" VBox.vgrow="ALWAYS">
+         <content>
+            <GridPane fx:id="seatGridPane" alignment="CENTER" hgap="1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #e0e0e0;" vgap="1.0">
+               <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="30.0" prefWidth="40.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="30.0" prefHeight="40.0" valignment="CENTER" vgrow="ALWAYS" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="image1" fitHeight="30.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" visible="false" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                     <image>
+                        <Image url="@Image/seat_sold.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      <Button fx:id="doneButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#doneButtonClicked" style="-fx-font-size: 15px;" styleClass="button-blue" stylesheets="@CineDetailsStyle.css" text="Done" />
+   </children>
+</VBox>
